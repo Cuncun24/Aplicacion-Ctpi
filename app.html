@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Evaluativo - SENA CTPI</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="contenedor-inicio">
+        <h2>Iniciar Sesión</h2>
+        <form id="formulario-login">
+            <label for="usuario">Nombre de Usuario:</label>
+            <input type="text" id="usuario" required>
+            <label for="clave">Contraseña:</label>
+            <input type="password" id="clave" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <div id="contenedor-principal" style="display: none;">
+        <header>
+            <span>Usuario: <span id="nombre-usuario"></span></span>
+            <button id="boton-salir">Salir</button>
+        </header>
+        <h2>Aprendices SENA CTPI 2025</h2>
+        <label for="buscar-ficha">Buscar Código Ficha:</label>
+        <input type="text" id="buscar-ficha" placeholder="Escriba el código de ficha">
+        <button id="boton-buscar-ficha">Buscar</button>
+        <label for="selector-codigo-ficha">Seleccione Código Ficha:</label>
+        <select id="selector-codigo-ficha">
+            <option value="">Seleccionar ficha</option>
+        </select>
+        <p><strong>Nombre Programa:</strong> <span id="nombre-del-programa"></span></p>
+        <table id="tabla-estudiantes">
+            <thead>
+                <tr>
+                    <th>Tipo Documento</th>
+                    <th>Número Documento</th>
+                    <th>Nombre</th>
+                    <th>Primer Apellido</th>
+                    <th>Segundo Apellido</th>
+                    <th>Estado del Aprendiz</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla-estudiantes"></tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
